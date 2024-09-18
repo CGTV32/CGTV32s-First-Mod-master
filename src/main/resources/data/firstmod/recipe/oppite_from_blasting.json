@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "oppite",
+  "ingredient": {
+    "item": "firstmod:raw_oppite"
+  },
+  "result": {
+    "count": 1,
+    "id": "firstmod:oppite_block"
+  }
+}
