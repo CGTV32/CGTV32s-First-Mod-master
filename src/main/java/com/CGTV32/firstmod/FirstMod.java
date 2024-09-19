@@ -57,6 +57,7 @@ public class FirstMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.OPPITE);
             event.accept(ModItems.RAW_OPPITE);
+            event.accept(ModItems.BLICKY);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.OPPITE_BLOCK);
