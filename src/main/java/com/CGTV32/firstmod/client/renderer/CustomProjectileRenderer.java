@@ -16,7 +16,6 @@ import net.minecraft.util.Mth;
 
 public class CustomProjectileRenderer extends EntityRenderer<CustomProjectile> {
     private static final ResourceLocation TEXTURE = new ResourceLocation(FirstMod.MOD_ID, "textures/entity/custom_projectile.png");
-    private static final RenderType RENDER_TYPE = RenderType.entityCutout(TEXTURE);
 
     public CustomProjectileRenderer(EntityRendererProvider.Context context) {
         super(context);
@@ -25,12 +24,12 @@ public class CustomProjectileRenderer extends EntityRenderer<CustomProjectile> {
     @Override
     public void render(CustomProjectile entity, float entityYaw, float partialTicks, PoseStack matrixStack, MultiBufferSource buffer, int packedLight) {
         matrixStack.pushPose();
-        matrixStack.mulPose(quaternionFromYXZ(Mth.lerp(partialTicks, entity.yRotO, entity.getYRot()) - 90.0F, 0, 0));
-        matrixStack.mulPose(quaternionFromYXZ(0, 0, Mth.lerp(partialTicks, entity.xRotO, entity.getXRot())));
+        matrixStack.mulPose(rotation(Mth.lerp(partialTicks, entity.yRotO, entity.getYRot()) - 90.0F, 0, 0));
+        matrixStack.mulPose(rotation(0, 0, Mth.lerp(partialTicks, entity.xRotO, entity.getXRot())));
 
         matrixStack.scale(0.5F, 0.5F, 0.5F);
 
-        VertexConsumer vertexConsumer = buffer.getBuffer(RENDER_TYPE);
+        VertexConsumer vertexConsumer = buffer.getBuffer(RenderType.entityCutout(this.getTextureLocation(entity)));
         PoseStack.Pose pose = matrixStack.last();
         Matrix4f matrix4f = pose.pose();
         Matrix3f matrix3f = pose.normal();
@@ -54,12 +53,8 @@ public class CustomProjectileRenderer extends EntityRenderer<CustomProjectile> {
                 .endVertex();
     }
 
-    private static org.joml.Quaternionf quaternionFromYXZ(float yaw, float pitch, float roll) {
-        org.joml.Quaternionf quaternion = new org.joml.Quaternionf();
-        quaternion.rotateY(yaw * ((float)Math.PI / 180F));
-        quaternion.rotateX(pitch * ((float)Math.PI / 180F));
-        quaternion.rotateZ(roll * ((float)Math.PI / 180F));
-        return quaternion;
+    private static org.joml.Quaternionf rotation(float x, float y, float z) {
+        return new org.joml.Quaternionf().rotationXYZ(x * ((float)Math.PI / 180F), y * ((float)Math.PI / 180F), z * ((float)Math.PI / 180F));
     }
 
     @Override
