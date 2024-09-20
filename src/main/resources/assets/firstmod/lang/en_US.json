@@ -5,11 +5,19 @@
 
   "item.firstmod.blicky": "Blicky",
 
+  "item.firstmod.obamium": "Obamium",
+
+  "item.firstmod.raw_obamium": "Raw Obamium",
+
+  "item.firstmod.obamium_template": "Obamium Template",
+
   "block.firstmod.oppite_block": "Oppite Block",
 
   "block.firstmod.raw_oppite_block": "Raw Oppite Block",
 
   "block.firstmod.oppite_ore": "Oppite Ore",
+
+  "block.firstmod.obamium_block": "Block of Obamium",
 
   "creativetab.firstmod.opptab": "Oppite Items",
 

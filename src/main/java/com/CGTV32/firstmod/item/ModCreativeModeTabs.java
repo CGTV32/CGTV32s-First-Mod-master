@@ -21,6 +21,13 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.OPPITE.get());
                         output.accept(ModItems.RAW_OPPITE.get());
+
+                        output.accept(ModItems.OBAMIUM.get());
+                        output.accept(ModItems.RAW_OBAMIUM.get());
+
+                        output.accept(ModItems.BLICKY.get());
+
+                        output.accept(ModItems.OBAMIUM_SWORD.get());
                     }).build());
 
 
@@ -29,11 +36,15 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(OPP_TAB.getId())
                     .title(Component.translatable("creativetab.firstmod.oppblockstab"))
                     .displayItems((itemDisplayParameters, output) -> {
+
                         output.accept(ModBlocks.OPPITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_OPPITE_BLOCK.get());
-                        output.accept(ModBlocks.OPPITE_ORE.get());
-                    }).build());
 
+                        output.accept(ModBlocks.OPPITE_ORE.get());
+                        output.accept(ModBlocks.OBAMIUM_BLOCK.get());
+
+                    })
+                    .build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

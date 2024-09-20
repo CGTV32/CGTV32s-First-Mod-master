@@ -39,6 +39,11 @@ public class ModBlocks {
                     .strength(5f)
                     .requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> OBAMIUM_BLOCK = registerBlock("obamium_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f)
+                    .requiresCorrectToolForDrops()));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

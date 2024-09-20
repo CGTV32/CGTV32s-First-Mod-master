@@ -3,12 +3,12 @@
   "category": "misc",
   "cookingtime": 100,
   "experience": 0.25,
-  "group": "oppite",
+  "group": "obamium",
   "ingredient": {
-    "item": "firstmod:raw_oppite"
+    "item": "firstmod:raw_obamium"
   },
   "result": {
     "count": 1,
-    "id": "firstmod:oppite"
+    "id": "firstmod:obamium"
   }
 }
