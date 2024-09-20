@@ -10,7 +10,7 @@ public class ObamiumSwordItem extends SwordItem {
         // SwordItem constructor: Tier, attack damage modifier, attack speed, item properties
         super(Tiers.NETHERITE, new Item.Properties()
                 .fireResistant()
-                .attributes(SwordItem.createAttributes(Tiers.NETHERITE, 3, -2.4F)));
+                .attributes(SwordItem.createAttributes(Tiers.NETHERITE, 100000000, 1000F)));
     }
 
 }

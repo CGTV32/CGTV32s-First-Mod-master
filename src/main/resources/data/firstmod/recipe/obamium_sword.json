@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {"item": "firstmod:obamium"},
+
+    "B": {"item": "firstmod:obamium_template"},
+
+    "C": {"item": "netherite_sword"},
+
+    "D": {"item": "firstmod:obamium_block"}
+  },
+  "pattern": [
+    " D ",
+    "ACA",
+    " B "
+    ],
+  "result": {
+    "count": 1,
+    "id": "firstmod:obamium_sword"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {"item": "firstmod:obamium"},
+
+    "B": {"item": "firstmod:netherite_upgrade"},
+
+    "D": {"item": "firstmod:obamium_block"}
+  },
+  "pattern": [
+    "AAA",
+    "ABA",
+    "ADA"
+    ],
+  "result": {
+    "count": 1,
+    "id": "firstmod:obamium_template"
+  }
+}
